@@ -29,7 +29,7 @@
 [project]
 name = "snowball"
 description = "Following Project is integrate a GitHub Actions which validates the Semantic Version"
-version = "0.2.0"
+version = "0.3.0"
 authors = [
     { name = "ShaidK", email = "ShaidK@duck.com" }
 ]
@@ -47,6 +47,9 @@ classifiers = [
 packages = [
     {include = "snowball", from = "src"}
 ]
+
+[tool.poetry.dependencies]
+semver = "^3.0.4"
 
 [build-system]
 requires = [ "poetry-core>=2.0.0,<3.0.0" ]
