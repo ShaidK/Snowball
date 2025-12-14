@@ -1,4 +1,18 @@
-commit d1ed94287eb953f9dc185f3013d088d00976ecaf
+commit d8670fa81ab6004fab117045c80b3a35e8afe769
+Author: ShaidK <ShaidK@Outlook.com>
+Date:   Sun Dec 14 11:48:44 2025 +0000
+
+    V0.1.0
+    
+    Update Commit - Committing Files associated with git configurations
+    
+    - Committing the following Files: '.gitignore' & '.gitattributes'
+
+ .gitattributes | 52 +++++++++++++++++++++++++++++++++++++++++++++++++
+ .gitignore     | 61 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 113 insertions(+)
+
+commit 463bb5673910b99603b3d8494ddcbb1e22ea9787
 Author: ShaidK <ShaidK@Outlook.com>
 Date:   Sun Dec 14 11:35:40 2025 +0000
 
@@ -9,7 +23,7 @@ Date:   Sun Dec 14 11:35:40 2025 +0000
     - Committing the following Files: 'CHANGELOG', 'LICENSE' & 'README.md'
     - Initialising main Trunk Branch: 'build'
 
- CHANGELOG |  0
+ CHANGELOG | 15 +++++++++++++++
  LICENSE   | 21 +++++++++++++++++++++
  README.md | 25 +++++++++++++++++++++++++
- 3 files changed, 46 insertions(+)
+ 3 files changed, 61 insertions(+)
