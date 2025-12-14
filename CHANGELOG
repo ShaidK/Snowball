@@ -1,0 +1,15 @@
+commit d1ed94287eb953f9dc185f3013d088d00976ecaf
+Author: ShaidK <ShaidK@Outlook.com>
+Date:   Sun Dec 14 11:35:40 2025 +0000
+
+    V0.0.0
+    
+    Initial Commit - Committing initial Files within the Snowball Project
+    
+    - Committing the following Files: 'CHANGELOG', 'LICENSE' & 'README.md'
+    - Initialising main Trunk Branch: 'build'
+
+ CHANGELOG |  0
+ LICENSE   | 21 +++++++++++++++++++++
+ README.md | 25 +++++++++++++++++++++++++
+ 3 files changed, 46 insertions(+)
