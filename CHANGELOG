@@ -1,6 +1,22 @@
-commit d8670fa81ab6004fab117045c80b3a35e8afe769
+commit 1fed3ef8013c4768f4d2146dd69cbd3cf73eacaf
 Author: ShaidK <ShaidK@Outlook.com>
-Date:   Sun Dec 14 11:48:44 2025 +0000
+Date:   Sun Dec 14 12:11:42 2025 +0000
+
+    V0.2.0
+    
+    Update Commit - Integrating the Python Build Tooling: 'poetry'
+    
+    - Integrated the Python Build Tooling: 'poetry' within the Project
+    - Integrated required Project Directories
+
+ pyproject.toml           | 53 ++++++++++++++++++++++++++++++++++++++++++++++++
+ src/snowball/__init__.py | 27 ++++++++++++++++++++++++
+ tests/__init__.py        | 27 ++++++++++++++++++++++++
+ 3 files changed, 107 insertions(+)
+
+commit fe2b0e1614e1579e20ec0cec60d3f605b5af99df
+Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
+Date:   Sun Dec 14 11:54:03 2025 +0000
 
     V0.1.0
     
@@ -10,7 +26,8 @@ Date:   Sun Dec 14 11:48:44 2025 +0000
 
  .gitattributes | 52 +++++++++++++++++++++++++++++++++++++++++++++++++
  .gitignore     | 61 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 113 insertions(+)
+ CHANGELOG      | 20 ++++++++++++++++---
+ 3 files changed, 130 insertions(+), 3 deletions(-)
 
 commit 463bb5673910b99603b3d8494ddcbb1e22ea9787
 Author: ShaidK <ShaidK@Outlook.com>
