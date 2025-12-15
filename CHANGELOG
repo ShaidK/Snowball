@@ -1,6 +1,23 @@
-commit 3bc403e4b0967804b10427175174f5fe6b14095a
+commit a74b98a1a1fa8e6c80dd7e5d52dbc2c7ef5f7a46
 Author: ShaidK <ShaidK@Outlook.com>
-Date:   Sun Dec 14 12:21:13 2025 +0000
+Date:   Mon Dec 15 13:47:18 2025 +0000
+
+    V0.4.0
+    
+    Update Commit - Integrating the Build Pipeline for the Project
+    
+    - Integrated the GitHub Action Build Pipeline: 'build.yml'
+    - Updated the File: 'README.md' with additional content
+
+ .github/workflows/build.yml |  61 ++++++++++++++++++++++++++++++++++++++++++++
+ README.md                   |  13 +++++++++-
+ img/polar_bear.png          | Bin 0 -> 5829 bytes
+ pyproject.toml              |   2 +-
+ 4 files changed, 74 insertions(+), 2 deletions(-)
+
+commit ed5d0b11f3ee6b565349969b1a54ed4bdd31af9a
+Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
+Date:   Sun Dec 14 12:25:05 2025 +0000
 
     V0.3.0
     
@@ -9,9 +26,10 @@ Date:   Sun Dec 14 12:21:13 2025 +0000
     - Integrating require Python Package: 'semver' within Project
     - Committing the File: 'poetry.lock'
 
+ CHANGELOG      | 22 +++++++++++++++++++---
  poetry.lock    | 18 ++++++++++++++++++
  pyproject.toml |  5 ++++-
- 2 files changed, 22 insertions(+), 1 deletion(-)
+ 3 files changed, 41 insertions(+), 4 deletions(-)
 
 commit 918a14e881f27b11251ab18c2ac69d0d571dffab
 Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
