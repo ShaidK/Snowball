@@ -1,5 +1,5 @@
 #
-# File: __init__.toml | Note: Following file exposes the subdirectory to Python Interpreter  
+# File: __init__.py | Note: Following file exposes the subdirectory to Python Interpreter  
 #
 
 #

@@ -1,6 +1,25 @@
-commit a74b98a1a1fa8e6c80dd7e5d52dbc2c7ef5f7a46
+commit 6590bf48d97480d68a7a8d99042769641f3cdbec
 Author: ShaidK <ShaidK@Outlook.com>
-Date:   Mon Dec 15 13:47:18 2025 +0000
+Date:   Mon Dec 15 21:00:42 2025 +0000
+
+    V0.5.0
+    
+    Update Commit - Integrating the class to validate Semantic Versioning
+    
+    - Integrated the class: 'SemanticVersionValidation' to validate Semantic Version string
+    - Integrated additional tests to validates the functionality of class
+
+ .github/workflows/build.yml                 |  16 +-
+ poetry.lock                                 | 179 +++++++++++++++++++++-
+ pyproject.toml                              |   6 +-
+ src/snowball/__init__.py                    |   2 +-
+ tests/__init__.py => src/snowball/action.py |  30 +++-
+ tests/test_action.py                        | 227 ++++++++++++++++++++++++++++
+ 6 files changed, 452 insertions(+), 8 deletions(-)
+
+commit f31cd397a16f3213cec36ef6c5ac5355dbba0c4e
+Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
+Date:   Mon Dec 15 13:53:06 2025 +0000
 
     V0.4.0
     
@@ -10,10 +29,11 @@ Date:   Mon Dec 15 13:47:18 2025 +0000
     - Updated the File: 'README.md' with additional content
 
  .github/workflows/build.yml |  61 ++++++++++++++++++++++++++++++++++++++++++++
+ CHANGELOG                   |  24 ++++++++++++++---
  README.md                   |  13 +++++++++-
  img/polar_bear.png          | Bin 0 -> 5829 bytes
  pyproject.toml              |   2 +-
- 4 files changed, 74 insertions(+), 2 deletions(-)
+ 5 files changed, 95 insertions(+), 5 deletions(-)
 
 commit ed5d0b11f3ee6b565349969b1a54ed4bdd31af9a
 Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
