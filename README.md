@@ -1,3 +1,8 @@
+**INTEGRATION**
+
+The "Snowball" Action is a [Github Action][1] designed to validate a provided
+Semantic Version.
+
 **LICENSE**
 
 ```
@@ -23,3 +28,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+<p align="center">
+    <img src="./img/polar_bear.png" style="width: 100px; padding: 50px;" />
+</p>
+
+[1]: https://github.com/features/actions
