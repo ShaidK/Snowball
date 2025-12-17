@@ -1,5 +1,5 @@
 #
-# File: __init__.toml | Note: Following file exposes the subdirectory to Python Interpreter  
+# File: action.py | Note: Following file maintains validation of the Semantic Version 
 #
 
 #
@@ -25,3 +25,29 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 #
+
+from semver import Version
+
+class SemanticVersionValidation:
+    """
+    The following class is responsible for validating the semantic version string.
+    This ensure that the input conforms to Semantic Versioning specification
+    """
+
+    @staticmethod
+    def validate(version: str) -> bool:
+        """
+        The following static function validates if the provided string conform to 
+        Semantic Versioning specification
+        
+        :param version: Parameter sematic version string to be validated
+        :type version: str
+
+        :return: True if the string is valid semantic version else False
+        :rtype: bool
+        """
+        if not isinstance(version, str):
+            raise ValueError(
+                f"Invalid type for parameter 'version': expected str, got {type(version).__name__}"
+            )
+        return Version.is_valid(version=version.lstrip("Vv"))
