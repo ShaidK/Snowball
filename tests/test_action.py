@@ -35,6 +35,7 @@ class TestSemanticVersionValidation:
     The following class represent the tests associated with the class: TestSemanticVersionValidation
     """
 
+    @pytest.mark.failure
     @pytest.mark.parametrize(
         "version", [
             1,
@@ -49,6 +50,8 @@ class TestSemanticVersionValidation:
         with pytest.raises(expected_exception=ValueError, match=f"Invalid type for parameter 'version': expected str, got {type(version).__name__}"):
             SemanticVersionValidation.validate(version=version)
 
+
+    @pytest.mark.failure
     @pytest.mark.parametrize(
         "version", [
             #
@@ -157,6 +160,7 @@ class TestSemanticVersionValidation:
         except Exception as err:
             pytest.fail(f"FATAL: Error raise when testing the class: TestSemanticVersionValidation \n{err}")
 
+    @pytest.mark.success
     @pytest.mark.parametrize(
         "version", [
             #

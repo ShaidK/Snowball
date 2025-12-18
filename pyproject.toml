@@ -29,29 +29,55 @@
 [project]
 name = "snowball"
 description = "Following Project is integrate a GitHub Actions which validates the Semantic Version"
-version = "0.5.0"
+version = "0.6.0"
 authors = [
     { name = "ShaidK", email = "ShaidK@duck.com" }
 ]
 readme = "README.md"
-license = "MIT"
+license-files = [ 
+    "LICENSE"
+]
 requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
+    "Topic :: Software Development :: Build Tools"
 ]
+keywords = [
+    "poetry",
+    "github",
+    "semver"
+]
+
+dependencies = [
+    "semver>=3.0.4"
+]
+
+[project.urls]
+repository = "https://github.com/ShaidK/Snowball"
+issues = "https://github.com/ShaidK/Snowball/issues"
 
 [tool.poetry]
 packages = [
     {include = "snowball", from = "src"}
 ]
 
-[tool.poetry.dependencies]
-semver = "^3.0.4"
-
 [tool.poetry.group.test.dependencies]
 pytest = "^9.0.2"
+pytest-cov = "^7.0.0"
+
+[tool.pytest.ini_options]
+markers = [
+    "success",
+    "failure"
+]
+testpaths = [
+    "tests"
+]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 85
 
 [build-system]
 requires = [ "poetry-core>=2.0.0,<3.0.0" ]
