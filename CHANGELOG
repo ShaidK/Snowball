@@ -1,6 +1,23 @@
-commit 6590bf48d97480d68a7a8d99042769641f3cdbec
+commit b8d59e7bbd48a400e87b1dd9fe579538f3238f86
 Author: ShaidK <ShaidK@Outlook.com>
-Date:   Mon Dec 15 21:00:42 2025 +0000
+Date:   Thu Dec 18 20:38:30 2025 +0000
+
+    V0.6.0
+    
+    Update Commit - Updating the Build Pipeline to integrate Code Coverage
+    
+    - Integrated the Python Package: 'pytest-cov' to execute Code Coverage
+    - Updated the Pipeline: 'build.yml' to execute Code Coverage
+
+ .github/workflows/build.yml |  13 ++++-
+ poetry.lock                 | 132 +++++++++++++++++++++++++++++++++++++++++++-
+ pyproject.toml              |  38 +++++++++++--
+ tests/test_action.py        |   4 ++
+ 4 files changed, 177 insertions(+), 10 deletions(-)
+
+commit 0dd3302dd2c20a2259d70111157395caf1460d97
+Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
+Date:   Wed Dec 17 13:45:37 2025 +0000
 
     V0.5.0
     
@@ -9,13 +26,14 @@ Date:   Mon Dec 15 21:00:42 2025 +0000
     - Integrated the class: 'SemanticVersionValidation' to validate Semantic Version string
     - Integrated additional tests to validates the functionality of class
 
- .github/workflows/build.yml                 |  16 +-
+ .github/workflows/build.yml                 |  18 ++-
+ CHANGELOG                                   |  26 +++-
  poetry.lock                                 | 179 +++++++++++++++++++++-
  pyproject.toml                              |   6 +-
  src/snowball/__init__.py                    |   2 +-
  tests/__init__.py => src/snowball/action.py |  30 +++-
  tests/test_action.py                        | 227 ++++++++++++++++++++++++++++
- 6 files changed, 452 insertions(+), 8 deletions(-)
+ 7 files changed, 477 insertions(+), 11 deletions(-)
 
 commit f31cd397a16f3213cec36ef6c5ac5355dbba0c4e
 Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
