@@ -1,6 +1,22 @@
-commit b8d59e7bbd48a400e87b1dd9fe579538f3238f86
+commit 6e9df80952d4e6ca4c703174e6b3cea50e436321
 Author: ShaidK <ShaidK@Outlook.com>
-Date:   Thu Dec 18 20:38:30 2025 +0000
+Date:   Mon Dec 22 20:37:47 2025 +0000
+
+    V0.7.1
+    
+    Update Commit - Integrating File: 'toml' Linting within the Project
+    
+    - Integrated the Package: 'toml-sort' to lint the File Type: 'toml'
+    - Updated the Build Pipeline with File Type: 'toml' linting
+
+ .github/workflows/build.yml |  5 +++
+ poetry.lock                 | 31 +++++++++++++++++--
+ pyproject.toml              | 75 ++++++++++++++++++++++++---------------------
+ 3 files changed, 74 insertions(+), 37 deletions(-)
+
+commit 53f0340f871aba92657783feae2a0274c9bcb0ad
+Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
+Date:   Thu Dec 18 20:43:54 2025 +0000
 
     V0.6.0
     
@@ -10,10 +26,11 @@ Date:   Thu Dec 18 20:38:30 2025 +0000
     - Updated the Pipeline: 'build.yml' to execute Code Coverage
 
  .github/workflows/build.yml |  13 ++++-
+ CHANGELOG                   |  26 +++++++--
  poetry.lock                 | 132 +++++++++++++++++++++++++++++++++++++++++++-
  pyproject.toml              |  38 +++++++++++--
  tests/test_action.py        |   4 ++
- 4 files changed, 177 insertions(+), 10 deletions(-)
+ 5 files changed, 199 insertions(+), 14 deletions(-)
 
 commit 0dd3302dd2c20a2259d70111157395caf1460d97
 Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>

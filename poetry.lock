@@ -252,6 +252,21 @@ files = [
 ]
 
 [[package]]
+name = "toml-sort"
+version = "0.24.3"
+description = "Toml sorting library"
+optional = false
+python-versions = ">=3.9"
+groups = ["ci"]
+files = [
+    {file = "toml_sort-0.24.3-py3-none-any.whl", hash = "sha256:d70642f54827b4c17a6cde788dcb45d598c1eb9833544a2fcec5eb7b0b744ed4"},
+    {file = "toml_sort-0.24.3.tar.gz", hash = "sha256:74c3cab5c1ecaf76c8239addc15342de548fb39598694f1298550d0fe2673a81"},
+]
+
+[package.dependencies]
+tomlkit = ">=0.13.2"
+
+[[package]]
 name = "tomli"
 version = "2.3.0"
 description = "A lil' TOML parser"
@@ -305,6 +320,18 @@ files = [
 ]
 
 [[package]]
+name = "tomlkit"
+version = "0.13.3"
+description = "Style preserving TOML library"
+optional = false
+python-versions = ">=3.8"
+groups = ["ci"]
+files = [
+    {file = "tomlkit-0.13.3-py3-none-any.whl", hash = "sha256:c89c649d79ee40629a9fda55f8ace8c6a1b42deb912b2a8fd8d942ddadb606b0"},
+    {file = "tomlkit-0.13.3.tar.gz", hash = "sha256:430cf247ee57df2b94ee3fbe588e71d362a941ebb545dec29b53961d61add2a1"},
+]
+
+[[package]]
 name = "typing-extensions"
 version = "4.15.0"
 description = "Backported and Experimental Type Hints for Python 3.9+"
@@ -319,5 +346,5 @@ files = [
 
 [metadata]
 lock-version = "2.1"
-python-versions = ">=3.10"
-content-hash = "34922f4c3fb75234e492a1e7dce40ecb8440383215a985735e5f7b0bbbf83ea9"
+python-versions = ">=3.10,<4.0"
+content-hash = "f6f45708228dac974d4f9a8465b1ab99c33db650aa34726b24917b70cc1c67b3"
