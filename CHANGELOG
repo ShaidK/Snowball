@@ -1,6 +1,23 @@
-commit 6e9df80952d4e6ca4c703174e6b3cea50e436321
+commit 09c5bfc82da0618ee2f3685b7afaca1221a17a3f
 Author: ShaidK <ShaidK@Outlook.com>
-Date:   Mon Dec 22 20:37:47 2025 +0000
+Date:   Tue Dec 23 14:19:27 2025 +0000
+
+    V0.7.2
+    
+    Update Commit - Integrating File: 'md' Linting within the Project
+    
+    - Integrated the Package: 'pymarkdownlnt' to lint the File Type: 'md'
+    - Updated the Build Pipeline with File Type: 'md' linting
+
+ .github/workflows/build.yml |   5 +
+ README.md                   |   8 +-
+ poetry.lock                 | 338 +++++++++++++++++++++++++++++++++++++++++++-
+ pyproject.toml              |   9 +-
+ 4 files changed, 349 insertions(+), 11 deletions(-)
+
+commit dd52cb4e4d2f8c781cac5ac2d958864e289aa03c
+Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
+Date:   Mon Dec 22 20:46:29 2025 +0000
 
     V0.7.1
     
@@ -10,9 +27,10 @@ Date:   Mon Dec 22 20:37:47 2025 +0000
     - Updated the Build Pipeline with File Type: 'toml' linting
 
  .github/workflows/build.yml |  5 +++
+ CHANGELOG                   | 23 ++++++++++++--
  poetry.lock                 | 31 +++++++++++++++++--
  pyproject.toml              | 75 ++++++++++++++++++++++++---------------------
- 3 files changed, 74 insertions(+), 37 deletions(-)
+ 4 files changed, 94 insertions(+), 40 deletions(-)
 
 commit 53f0340f871aba92657783feae2a0274c9bcb0ad
 Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>

@@ -1,11 +1,11 @@
-**INTEGRATION**
+#### INTEGRATION
 
 The "Snowball" Action is a [Github Action][1] designed to validate a provided
 Semantic Version.
 
-**LICENSE**
+#### LICENSE
 
-```
+```text
 MIT License
 
 Copyright (c) 2025 ShaidK

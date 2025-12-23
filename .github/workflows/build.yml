@@ -75,6 +75,11 @@ jobs:
         source $(poetry env info --path)/bin/activate
         poetry run toml-sort pyproject.toml
 
+    - name: Execute Snowball Project Markdown Lint
+      run: |
+        source $(poetry env info --path)/bin/activate
+        poetry run pymarkdownlnt scan -r . -e ./.venv
+
     - name: Execute Snowball Project Tests
       run: |
         source $(poetry env info --path)/bin/activate
