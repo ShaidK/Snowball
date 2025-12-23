@@ -53,14 +53,14 @@ license-files = [
 name = "snowball"
 readme = "README.md"
 requires-python = ">=3.10,<4.0"
-version = "0.7.1"
+version = "0.7.2"
 
 [project.urls]
 issues = "https://github.com/ShaidK/Snowball/issues"
 repository = "https://github.com/ShaidK/Snowball"
 
 [tool.coverage.report]
-fail_under = 85
+fail_under = 95
 show_missing = true
 
 [tool.poetry]
@@ -69,11 +69,16 @@ packages = [
 ]
 
 [tool.poetry.group.ci.dependencies]
+pymarkdownlnt = "^0.9.34"
 toml-sort = "^0.24.3"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^9.0.2"
 pytest-cov = "^7.0.0"
+
+[tool.pymarkdown]
+plugins.md033.allowed_elements = "p"
+plugins.md041.enabled = false
 
 [tool.pytest.ini_options]
 markers = [
