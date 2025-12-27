@@ -1,6 +1,23 @@
-commit 09c5bfc82da0618ee2f3685b7afaca1221a17a3f
+commit f728d5346b374a50866ff04f4445cca2c29542de
 Author: ShaidK <ShaidK@Outlook.com>
-Date:   Tue Dec 23 14:19:27 2025 +0000
+Date:   Sat Dec 27 21:07:08 2025 +0000
+
+    V0.7.3
+    
+    Update Commit - Integrating File: 'yaml' Linting within the Project
+    
+    - Integrated the Package: 'yamllint' to lint the File Type: 'yaml'
+    - Updated the Build Pipeline with File Type: 'yaml' linting
+
+ .github/workflows/build.yml | 125 +++++++++++++++++++++++---------------------
+ .yamllint                   |   4 ++
+ poetry.lock                 |  33 +++++++++++-
+ pyproject.toml              |   3 +-
+ 4 files changed, 104 insertions(+), 61 deletions(-)
+
+commit f7f1b0336439fbdf65684d1d7c4ff556f00bf40e
+Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
+Date:   Tue Dec 23 14:25:11 2025 +0000
 
     V0.7.2
     
@@ -10,10 +27,11 @@ Date:   Tue Dec 23 14:19:27 2025 +0000
     - Updated the Build Pipeline with File Type: 'md' linting
 
  .github/workflows/build.yml |   5 +
+ CHANGELOG                   |  24 +++-
  README.md                   |   8 +-
  poetry.lock                 | 338 +++++++++++++++++++++++++++++++++++++++++++-
  pyproject.toml              |   9 +-
- 4 files changed, 349 insertions(+), 11 deletions(-)
+ 5 files changed, 370 insertions(+), 14 deletions(-)
 
 commit dd52cb4e4d2f8c781cac5ac2d958864e289aa03c
 Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
