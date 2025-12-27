@@ -53,7 +53,7 @@ license-files = [
 name = "snowball"
 readme = "README.md"
 requires-python = ">=3.10,<4.0"
-version = "0.7.2"
+version = "0.7.3"
 
 [project.urls]
 issues = "https://github.com/ShaidK/Snowball/issues"
@@ -71,6 +71,7 @@ packages = [
 [tool.poetry.group.ci.dependencies]
 pymarkdownlnt = "^0.9.34"
 toml-sort = "^0.24.3"
+yamllint = "^1.37.1"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^9.0.2"
