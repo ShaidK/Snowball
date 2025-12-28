@@ -1,6 +1,22 @@
-commit f728d5346b374a50866ff04f4445cca2c29542de
+commit bfefdd9cb2e82986a46212acbdda04c641bffee9
 Author: ShaidK <ShaidK@Outlook.com>
-Date:   Sat Dec 27 21:07:08 2025 +0000
+Date:   Sun Dec 28 12:40:04 2025 +0000
+
+    V0.7.4
+    
+    Update Commit - Integrating File: 'py' Linting within the Project
+    
+    - Integrated the Package: 'ruff' to lint the File Type: 'py'
+    - Updated the Build Pipeline with File Type: 'py' linting
+
+ .github/workflows/build.yml |  5 +++++
+ poetry.lock                 | 31 ++++++++++++++++++++++++++++++-
+ pyproject.toml              | 20 +++++++++++++++++++-
+ 3 files changed, 54 insertions(+), 2 deletions(-)
+
+commit de985832084d2c7061b532208773507f599fbd3f
+Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
+Date:   Sat Dec 27 21:17:57 2025 +0000
 
     V0.7.3
     
@@ -11,9 +27,10 @@ Date:   Sat Dec 27 21:07:08 2025 +0000
 
  .github/workflows/build.yml | 125 +++++++++++++++++++++++---------------------
  .yamllint                   |   4 ++
+ CHANGELOG                   |  24 +++++++--
  poetry.lock                 |  33 +++++++++++-
  pyproject.toml              |   3 +-
- 4 files changed, 104 insertions(+), 61 deletions(-)
+ 5 files changed, 125 insertions(+), 64 deletions(-)
 
 commit f7f1b0336439fbdf65684d1d7c4ff556f00bf40e
 Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
