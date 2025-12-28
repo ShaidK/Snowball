@@ -71,6 +71,11 @@ jobs:
           poetry config virtualenvs.in-project true
           poetry install --with test --no-interaction
 
+      - name: Execute Snowball Project PY Lint
+        run: |
+          source $(poetry env info --path)/bin/activate
+          poetry run ruff check .
+
       - name: Execute Snowball Project TOML Lint
         run: |
           source $(poetry env info --path)/bin/activate

@@ -53,7 +53,7 @@ license-files = [
 name = "snowball"
 readme = "README.md"
 requires-python = ">=3.10,<4.0"
-version = "0.7.3"
+version = "0.7.4"
 
 [project.urls]
 issues = "https://github.com/ShaidK/Snowball/issues"
@@ -72,6 +72,7 @@ packages = [
 pymarkdownlnt = "^0.9.34"
 toml-sort = "^0.24.3"
 yamllint = "^1.37.1"
+ruff = "^0.14.10"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^9.0.2"
@@ -89,6 +90,23 @@ markers = [
 testpaths = [
   "tests"
 ]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.format]
+indent-style = "tab"
+line-ending = "lf"
+quote-style = "double"
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint]
+ignore = ["E501"]
+select = ["E", "F"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
 
 [tool.tomlsort]
 no_block_comments = false
