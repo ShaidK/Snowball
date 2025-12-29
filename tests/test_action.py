@@ -26,13 +26,13 @@
 # SOFTWARE.
 #
 
-from snowball.action import SemanticVersionValidation
+from snowball.action import SemanticVersionService
 import pytest
 import uuid
 
-class TestSemanticVersionValidation:
+class TestSemanticVersionService:
     """
-    The following class represent the tests associated with the class: TestSemanticVersionValidation
+    The following class represent the tests associated with the class: TestSemanticVersionService
     """
 
     @pytest.mark.failure
@@ -46,9 +46,9 @@ class TestSemanticVersionValidation:
             ()
         ]
     )
-    def test__GIVEN__Invalid_Semantic_Version_Type__WHEN__Validating_Semantic_Version__THEN__Raise_ValueError(self, version: str):
+    def test__GIVEN__Invalid_Semantic_Version_Type__WHEN__Validating_Semantic_Version__THEN__Raise_ValueError(self, version: str) -> None:
         with pytest.raises(expected_exception=ValueError, match=f"Invalid type for parameter 'version': expected str, got {type(version).__name__}"):
-            SemanticVersionValidation.validate(version=version)
+            SemanticVersionService.validate(version=version)
 
 
     @pytest.mark.failure
@@ -154,11 +154,11 @@ class TestSemanticVersionValidation:
             #
         ]
     )
-    def test__GIVEN__Invalid_Semantic_Version_String__WHEN__Validating_Semantic_Version__THEN__Return_False(self, version: str):
+    def test__GIVEN__Invalid_Semantic_Version_String__WHEN__Validating_Semantic_Version__THEN__Return_False(self, version: str) -> None:
         try:
-            assert SemanticVersionValidation.validate(version=version) is False
+            assert SemanticVersionService.validate(version=version) is False
         except Exception as err:
-            pytest.fail(f"FATAL: Error raise when testing the class: TestSemanticVersionValidation \n{err}")
+            pytest.fail(f"FATAL: Error raise when testing the class: TestSemanticVersionService \n{err}")
 
     @pytest.mark.success
     @pytest.mark.parametrize(
@@ -224,8 +224,8 @@ class TestSemanticVersionValidation:
             "1.0.0+build-alpha"
         ]
     )
-    def test__GIVEN__Valid_Semantic_Version_String__WHEN__Validating_Semantic_Version__THEN__Return_True(self, version: str):
+    def test__GIVEN__Valid_Semantic_Version_String__WHEN__Validating_Semantic_Version__THEN__Return_True(self, version: str) -> None:
         try:
-            assert SemanticVersionValidation.validate(version=version) is True
+            assert SemanticVersionService.validate(version=version) is True
         except Exception as err:
-            pytest.fail(f"FATAL: Error raise when testing the class: TestSemanticVersionValidation \n{err}")
+            pytest.fail(f"FATAL: Error raise when testing the class: TestSemanticVersionService \n{err}")
