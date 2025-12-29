@@ -53,13 +53,19 @@ license-files = [
 name = "snowball"
 readme = "README.md"
 requires-python = ">=3.10,<4.0"
-version = "0.7.4"
+version = "0.8.0"
 
 [project.urls]
 issues = "https://github.com/ShaidK/Snowball/issues"
 repository = "https://github.com/ShaidK/Snowball"
 
 [tool.coverage.report]
+exclude_also = [
+  'def __repr__',
+  'raise NotImplementedError',
+  'if __name__ == .__main__.:',
+  '@(abc\.)?abstractmethod'
+]
 fail_under = 95
 show_missing = true
 
@@ -77,6 +83,7 @@ ruff = "^0.14.10"
 [tool.poetry.group.test.dependencies]
 pytest = "^9.0.2"
 pytest-cov = "^7.0.0"
+pytest-mock = "^3.15.1"
 
 [tool.pymarkdown]
 plugins.md033.allowed_elements = "p"
@@ -102,8 +109,11 @@ quote-style = "double"
 skip-magic-trailing-comma = false
 
 [tool.ruff.lint]
-ignore = ["E501"]
-select = ["E", "F"]
+ignore = ["D100", "D104", "D205", "D212", "E501"]
+select = ["ANN", "B", "D", "E", "F"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
