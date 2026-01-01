@@ -1,19 +1,37 @@
-commit 1f2177cb8687e4701f31b039a6103658d1d49bef
+commit 971c9b79248a3c10a691f5ab0d606035eaf87698
 Author: ShaidK <ShaidK@Outlook.com>
-Date:   Mon Dec 29 13:33:05 2025 +0000
+Date:   Thu Jan 1 14:27:55 2026 +0000
+
+    V0.9.0
+    
+    Update Commit - Integrating the File: 'Dockerfile' to execute the Snowball Project
+    
+    - Integrated the File: 'Dockerfile' to build the Docker Image for Github Action
+    - Integrated additional configuration to execute the Snowball Project
+
+ .dockerignore  | 79 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Dockerfile     | 38 ++++++++++++++++++++++++++++
+ pyproject.toml |  5 +++-
+ 3 files changed, 121 insertions(+), 1 deletion(-)
+
+commit 31fbd19654ded48dd6519239a0a58cd204da206d
+Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
+Date:   Mon Dec 29 13:42:53 2025 +0000
 
     V0.8.0
     
-    Update Commit - Integrating Arguement Parsing to handle Script Execution
+    Update Commit - Integrating Argument Parsing to handle Script Execution
     
     - Integrated the Python Package: 'argparse' to handle Script Execution
     - Updated the File: 'pyproject.toml' with additional configuration
 
- pyproject.toml         |  15 ++++--
+ CHANGELOG              |  24 ++++++++--
+ poetry.lock            |  20 +++++++-
+ pyproject.toml         |  16 +++++--
  src/snowball/action.py |  45 ++++++++++++++++--
  tests/test_action.py   |  22 ++++-----
  tests/test_main.py     | 123 +++++++++++++++++++++++++++++++++++++++++++++++++
- 4 files changed, 188 insertions(+), 17 deletions(-)
+ 6 files changed, 229 insertions(+), 21 deletions(-)
 
 commit 6915ce76a58feaa6ee843b238b178895dd5a850b
 Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
