@@ -53,7 +53,7 @@ license-files = [
 name = "snowball"
 readme = "README.md"
 requires-python = ">=3.10,<4.0"
-version = "0.9.0"
+version = "0.10.0"
 
 [project.scripts]
 snowball = "snowball.action:cli"
@@ -90,6 +90,7 @@ pytest-mock = "^3.15.1"
 
 [tool.pymarkdown]
 plugins.md033.allowed_elements = "p"
+plugins.md036.enabled = false
 plugins.md041.enabled = false
 
 [tool.pytest.ini_options]

@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 #
-# File: Dockerfile.toml | Note: Following file represent the Snowball Docker Image
+# File: Dockerfile | Note: Following file represent the Snowball Docker Image
 #
 
 #
@@ -28,11 +28,25 @@
 # SOFTWARE.
 #
 
-FROM python:3.13-slim 
+#
+# NOTE: Docker Multistage Build - Build Stage
+#
+FROM python:3.13-slim as build
+
+WORKDIR /build
 
 COPY . .
-
-RUN apt update && apt upgrade && python -m pip install poetry && \
+RUN python -m pip install --no-cache-dir --upgrade pip poetry && \
     poetry install --without ci --without test
 
-ENTRYPOINT ["python", "-m", "poetry", "run", "snowball"]
+RUN poetry build --format wheel
+
+#
+# NOTE: Docker Multistage Build - Execution Stage
+#
+FROM python:3.13-slim
+
+COPY --from=build /build/dist/*.whl .
+RUN pip install --no-cache-dir *.whl
+
+ENTRYPOINT ["snowball"]
