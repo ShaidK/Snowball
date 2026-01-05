@@ -1,6 +1,24 @@
-commit 971c9b79248a3c10a691f5ab0d606035eaf87698
+commit 4d8cfc29ab965e243a9116fa98ad52c3a0168aa3
 Author: ShaidK <ShaidK@Outlook.com>
-Date:   Thu Jan 1 14:27:55 2026 +0000
+Date:   Mon Jan 5 11:18:38 2026 +0000
+
+    V0.10.0
+    
+    Update Commit - Integrating Multi-Stage Docker Build within the Project
+    
+    - Integrated Multi-Stage Docker Build within Snowball Docker Image
+    - Integrated additional components within 'READMD.md'
+
+ .github/CODE_OF_CONDUCT.md |  56 +++++++++++++++++++++++++++++++++++++++++++++
+ Dockerfile                 |  24 +++++++++++++++----
+ README.md                  |  40 ++++++++++++++++++++++++++++++--
+ img/snowball.png           | Bin 0 -> 13328 bytes
+ pyproject.toml             |   3 ++-
+ 5 files changed, 115 insertions(+), 8 deletions(-)
+
+commit 1d72deee9df3ccadbbb23a45d91c4eee1e94de3c
+Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
+Date:   Thu Jan 1 14:36:00 2026 +0000
 
     V0.9.0
     
@@ -10,9 +28,10 @@ Date:   Thu Jan 1 14:27:55 2026 +0000
     - Integrated additional configuration to execute the Snowball Project
 
  .dockerignore  | 79 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ CHANGELOG      | 28 +++++++++++++++++----
  Dockerfile     | 38 ++++++++++++++++++++++++++++
  pyproject.toml |  5 +++-
- 3 files changed, 121 insertions(+), 1 deletion(-)
+ 4 files changed, 144 insertions(+), 6 deletions(-)
 
 commit 31fbd19654ded48dd6519239a0a58cd204da206d
 Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>

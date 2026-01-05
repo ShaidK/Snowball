@@ -1,7 +1,43 @@
+![Snowstorm](img/snowball.png)
+
+![License](https://img.shields.io/github/license/shaidk/snowball?color=00B4D4)
+
 #### INTEGRATION
 
-The "Snowball" Action is a [Github Action][1] designed to validate a provided
-Semantic Version.
+The "Snowball" Action is a [GitHub Action][1] designed to validate a provided
+Semantic Version. The "Snowball" Action is based upon the GitHub Action for
+Docker which uses a Docker Image to execute the GitHub Action step.
+
+#### PROJECT STRUCTURE
+
+Following is the structure of the Snowball GitHub Action Project:
+
+```text
+.
+├── pyproject.toml
+├── poetry.lock
+├── Dockerfile
+├── CHANGELOG
+├── LICENSE
+├── README.md
+├── .gitattributes
+├── .gitignore
+├── .yamllint
+├── .dockerignore
+├── .github
+│   └── workflows
+│       └── build.yml
+├── img
+│   ├── polar_bear.png
+│   └── snowball.png
+├── src
+│   └── snowball
+│       ├── action.py
+│       └── __init__.py
+└── tests
+    ├── test_action.py
+    └── test_main.py
+```
 
 #### LICENSE
 
