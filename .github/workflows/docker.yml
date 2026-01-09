@@ -1,0 +1,74 @@
+#
+# File: docker.yml | Note: Following file maintains pipeline to build the Docker Image
+#
+
+#
+# MIT License
+#
+# Copyright (c) 2025 ShaidK
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+#
+
+---
+
+name: Build Docker Image
+on:
+  push:
+    branches:
+      - build
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  build:
+    name: Build Docker Image
+    runs-on: ubuntu-latest
+
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+      - name: Checkout Snowball Project Repository
+        uses: actions/checkout@v6
+
+      - name: Docker Login
+        uses: docker/login-action@v3.6.0
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Integrate Docker Tag Environment Variable
+        id: tag
+        uses: actions/github-script@v8
+        with:
+          script: |
+            core.setOutput("IMAGE_NAME", `${context.repo.owner}/${context.repo.repo}`.toLowerCase());
+            core.setOutput("VERSION", context.payload.head_commit.message.toLowerCase());
+
+      - name: Build and Publish Docker Image
+        uses: docker/build-push-action@v6.18.0
+        with:
+            file: Dockerfile
+            push: false
+            context: .
+            tags: ${{ env.REGISTRY }}/${{ steps.tag.outputs.IMAGE_NAME }}:${{ steps.tag.outputs.VERSION }}
