@@ -63,7 +63,7 @@ jobs:
         with:
           script: |
             core.setOutput("IMAGE_NAME", `${context.repo.owner}/${context.repo.repo}`.toLowerCase());
-            core.setOutput("VERSION", context.payload.head_commit.message.toLowerCase());
+            core.setOutput("VERSION", (context.payload.head_commit.message.split("\n")[0].match(/^V\d+\.\d+\.\d+$/) || [""])[0]);
 
       - name: Build and Publish Docker Image
         uses: docker/build-push-action@v6.18.0
