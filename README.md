@@ -1,6 +1,8 @@
 ![Snowstorm](img/snowball.png)
 
-![License](https://img.shields.io/github/license/shaidk/snowball?color=00B4D4)
+![License](https://img.shields.io/github/license/shaidk/snowball?style=flat-square&labelColor=2980B9&color=46535E)
+![Build](https://img.shields.io/github/actions/workflow/status/shaidk/snowball/build.yml?style=flat-square&labelColor=2980B9&color=46535E&label=build)
+![Docker](https://img.shields.io/github/actions/workflow/status/shaidk/snowball/docker.yml?style=flat-square&labelColor=2980B9&color=46535E&label=docker)
 
 #### INTEGRATION
 

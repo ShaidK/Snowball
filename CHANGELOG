@@ -1,20 +1,52 @@
-commit 4d8cfc29ab965e243a9116fa98ad52c3a0168aa3
+commit 4ad063df1c1fe6fb1fe40f00e460a0551405e546
 Author: ShaidK <ShaidK@Outlook.com>
-Date:   Mon Jan 5 11:18:38 2026 +0000
+Date:   Sat Jan 10 20:58:29 2026 +0000
+
+    V0.11.1
+    
+    Fix Commit - Committing fix for the Docker Build Pipeline
+    
+    - Committing fix for the Docker Build Pipeline
+    - Integrating Dependabot within the Project
+
+ .github/dependabot.yml       | 76 ++++++++++++++++++++++++++++++++++++++++++++
+ .github/workflows/docker.yml |  2 +-
+ README.md                    |  4 ++-
+ pyproject.toml               |  2 +-
+ 4 files changed, 81 insertions(+), 3 deletions(-)
+
+commit cbd44ef309de122f10ec7d657f8c452b320c8ea1
+Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
+Date:   Fri Jan 9 15:11:48 2026 +0000
+
+    V0.11.0
+    
+    Update Commit - Integrating Docker Build Pipeline within the Project
+    
+    - Integrated Pipeline to build the "Snowball" Docker Image
+
+ .github/workflows/docker.yml | 74 ++++++++++++++++++++++++++++++++++++++++++++
+ pyproject.toml               |  2 +-
+ 2 files changed, 75 insertions(+), 1 deletion(-)
+
+commit 7faf73b72ced27b8b438c1a71b77e6a41dc3664a
+Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
+Date:   Mon Jan 5 11:24:50 2026 +0000
 
     V0.10.0
     
     Update Commit - Integrating Multi-Stage Docker Build within the Project
     
     - Integrated Multi-Stage Docker Build within Snowball Docker Image
-    - Integrated additional components within 'READMD.md'
+    - Integrated additional components within File: 'READMD.md'
 
  .github/CODE_OF_CONDUCT.md |  56 +++++++++++++++++++++++++++++++++++++++++++++
+ CHANGELOG                  |  25 +++++++++++++++++---
  Dockerfile                 |  24 +++++++++++++++----
  README.md                  |  40 ++++++++++++++++++++++++++++++--
  img/snowball.png           | Bin 0 -> 13328 bytes
  pyproject.toml             |   3 ++-
- 5 files changed, 115 insertions(+), 8 deletions(-)
+ 6 files changed, 137 insertions(+), 11 deletions(-)
 
 commit 1d72deee9df3ccadbbb23a45d91c4eee1e94de3c
 Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
