@@ -31,7 +31,7 @@
 #
 # NOTE: Docker Multistage Build - Build Stage
 #
-FROM python:3.13-slim as build
+FROM python:3.14-slim as build
 
 WORKDIR /build
 
@@ -44,7 +44,7 @@ RUN poetry build --format wheel
 #
 # NOTE: Docker Multistage Build - Execution Stage
 #
-FROM python:3.13-slim
+FROM python:3.14-slim
 
 COPY --from=build /build/dist/*.whl .
 RUN pip install --no-cache-dir *.whl
