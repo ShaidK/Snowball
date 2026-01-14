@@ -1,5 +1,6 @@
 ![Snowstorm](img/snowball.png)
 
+![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fshaidk%2Fsnowball%2Fbuild%2Fpyproject.toml&style=flat-square&labelColor=2980B9&color=46535E)
 ![License](https://img.shields.io/github/license/shaidk/snowball?style=flat-square&labelColor=2980B9&color=46535E)
 ![Build](https://img.shields.io/github/actions/workflow/status/shaidk/snowball/build.yml?style=flat-square&labelColor=2980B9&color=46535E&label=build)
 ![Docker](https://img.shields.io/github/actions/workflow/status/shaidk/snowball/docker.yml?style=flat-square&labelColor=2980B9&color=46535E&label=docker)
@@ -7,8 +8,51 @@
 #### INTEGRATION
 
 The "Snowball" Action is a [GitHub Action][1] designed to validate a provided
-Semantic Version. The "Snowball" Action is based upon the GitHub Action for
-Docker which uses a Docker Image to execute the GitHub Action step.
+Semantic Version. The "Snowball" Action is based upon the [GitHub Action for
+Docker][2] which uses a Docker Image to execute the GitHub Action.
+
+To integrate the "Snowball" Action within your Github Workflow you need to
+add the following steps within your Github Workflow File:
+
+```yml
+- name: Validate Semantic Version
+  uses: ShaidK/Snowball@v0.12.0
+  with:
+      version: '<VERSION_TO_VALIDATE>'
+```
+
+#### INPUT
+
+The "Snowball" Action requires the Input Parameter: `version`. The Input
+Parameter defines the string which need to be validated & confirm if it
+conforms to Semantic Versioning.
+
+#### OUTPUT
+
+The "Snowball" Action will output if the Version validates & conforms to
+Semantic Versioning or will output an Error if the string does not
+conform.
+
+#### USAGE
+
+The following is an example usage of the "Snowball" Action to validate
+the Semantic Version string:
+
+```yml
+jobs:
+    validate_version:
+        runs-on: ubuntu-latest
+        name: Validate Semantic Version
+        steps:
+            - uses: actions/checkout@v6
+              with:
+                  fetch-depth: 0
+
+            - name: Validate Semantic Version
+              uses: ShaidK/Snowflake@v0.12.0
+              with:
+                  version: 'V0.12.0'
+```
 
 #### PROJECT STRUCTURE
 
@@ -28,6 +72,7 @@ Following is the structure of the Snowball GitHub Action Project:
 ├── .dockerignore
 ├── .github
 │   └── workflows
+│       ├── docker.yml
 │       └── build.yml
 ├── img
 │   ├── polar_bear.png
@@ -39,6 +84,23 @@ Following is the structure of the Snowball GitHub Action Project:
 └── tests
     ├── test_action.py
     └── test_main.py
+```
+
+#### DOCKER IMAGE
+
+The "Snowball" Project build a Docker Image which is used for the execution
+of the GitHub Action. The Docker Image can be pulled using the following
+Command:
+
+```shell
+docker pull ghcr.io/shaidk/snowball:<VERSION>
+```
+
+The "Snowball" Docker Image can then be executed within a Container using
+the following Command:
+
+```shell
+docker run ghcr.io/shaidk/snowball:<VERSION> --version V1.0.0
 ```
 
 #### LICENSE
@@ -72,3 +134,4 @@ SOFTWARE.
 </p>
 
 [1]: https://github.com/features/actions
+[2]: https://docs.github.com/en/actions/tutorials/use-containerized-services/create-a-docker-container-action
