@@ -1,6 +1,49 @@
-commit 4ad063df1c1fe6fb1fe40f00e460a0551405e546
+commit 98a39a8bef15b0cd2f591e18761ad6e4cbef9ab1
 Author: ShaidK <ShaidK@Outlook.com>
-Date:   Sat Jan 10 20:58:29 2026 +0000
+Date:   Wed Jan 14 19:58:02 2026 +0000
+
+    V0.12.0
+    
+    Update Commit - Integrating Snowball Action Metadata File
+    
+    - Integrating the Snowball Action Metadata File: 'action.yml'
+    - Updated additional documentation within File: 'README.md'
+
+ README.md      | 67 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ action.yml     | 42 ++++++++++++++++++++++++++++++++++++
+ pyproject.toml |  2 +-
+ 3 files changed, 108 insertions(+), 3 deletions(-)
+
+commit 0cd0b29f86688041fae278f41420312414093536
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Sun Jan 11 20:21:56 2026 +0000
+
+    V0.11.3
+    
+    Fix Commit - Updating Python Package Version within Python Build Tooling
+    
+    - Updating Python Package Version: 'ruff' from Version: '0.14.10' -> '0.14.11'
+
+ poetry.lock    | 42 +++++++++++++++++++++---------------------
+ pyproject.toml |  2 +-
+ 2 files changed, 22 insertions(+), 22 deletions(-)
+
+commit fa889e61a40573014ab5e32d7bb0f0b7abee862b
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Sun Jan 11 20:08:39 2026 +0000
+
+    V0.11.2
+    
+    Fix Commit - Updating Docker Image Version within the Docker Build Pipeline
+    
+    - Updating Docker Image Version: 'python-3.13-slim' -> 'python-3.14-slim'
+
+ Dockerfile | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 294af81ca45d2e4b461cebe75979c3cf02276ce5
+Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
+Date:   Sat Jan 10 21:03:36 2026 +0000
 
     V0.11.1
     
@@ -11,9 +54,10 @@ Date:   Sat Jan 10 20:58:29 2026 +0000
 
  .github/dependabot.yml       | 76 ++++++++++++++++++++++++++++++++++++++++++++
  .github/workflows/docker.yml |  2 +-
+ CHANGELOG                    | 40 ++++++++++++++++++++---
  README.md                    |  4 ++-
  pyproject.toml               |  2 +-
- 4 files changed, 81 insertions(+), 3 deletions(-)
+ 5 files changed, 117 insertions(+), 7 deletions(-)
 
 commit cbd44ef309de122f10ec7d657f8c452b320c8ea1
 Author: Shaid Khan <100602151+ShaidK@users.noreply.github.com>
