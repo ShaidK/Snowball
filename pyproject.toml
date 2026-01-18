@@ -80,8 +80,8 @@ packages = [
 [tool.poetry.group.ci.dependencies]
 pymarkdownlnt = "^0.9.34"
 toml-sort = "^0.24.3"
-yamllint = "^1.37.1"
-ruff = "^0.14.11"
+yamllint = "^1.38.0"
+ruff = "^0.14.13"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^9.0.2"
